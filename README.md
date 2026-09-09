@@ -1,9 +1,7 @@
 # Hedy-Lamarr
 Enquanto o mundo caminhava para a Segunda Guerra Mundial, a atriz que ja era uma lenda do cinema, 
 Hedy Lamarr, posava para fotos publicitárias e interpretava femmes fatales nas telas.
-<a href="./imagens/print-do-sistema.png" target="_blank">
-  <img src="./imagens/print-do-sistema.png" alt="Tela inicial do sistema" width="400">
-</a>
+
 Lamarr era um gênio da tecnologia e, enquanto  conquistava o coração de Hollywood na década de 1940,
      estava ao mesmo tempo ocupada idealizando uma invenção que esperava que pudesse ajudar sua nação adotiva,
     os Estados Unidos, a manter a Alemanha nazista sob controle. Ela estava a par das últimas novidades em tecnologia
