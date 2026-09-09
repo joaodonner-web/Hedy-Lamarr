@@ -3,25 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hedy Lamar</title>
+    <title>Hedy Lamarr</title>
+    <style>
+        /* Importação de uma fonte moderna do Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+        /* Configurações globais e do corpo da página */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f9;
+            color: #333333;
+            line-height: 1.8;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Container principal para centralizar o conteúdo */
+        .container {
+            max-width: 800px;
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        /* Estilização dos Títulos */
+        h1 {
+            color: #1a252f;
+            font-size: 1.8rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-left: 4px solid #3498db;
+            padding-left: 12px;
+        }
+
+        /* Estilização do Primeiro Título */
+        h1:first-of-type {
+            margin-top: 0;
+        }
+
+        /* Estilização dos Parágrafos */
+        p {
+            font-size: 1.05rem;
+            color: #555555;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        /* Container para a imagem ficar bonita e centralizada */
+        .img-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        /* Estilização da Imagem */
+        img {
+            max-width: 100%;
+            width: 250px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease;
+        }
+
+        /* Efeito ao passar o mouse por cima da imagem */
+        img:hover {
+            transform: scale(1.03);
+        }
+    </style>
 </head>
 <body>
-    <h1>O inicio</h1>
-    <p>Enquanto o mundo caminhava para a Segunda Guerra Mundial, a atriz que ja era uma lenda do cinema, 
-        Hedy Lamarr, posava para fotos publicitárias e interpretava femmes fatales nas telas</p>
-    <p>Lamarr era um gênio da tecnologia e, enquanto  conquistava o coração de Hollywood na década de 1940,
-     estava ao mesmo tempo ocupada idealizando uma invenção que esperava que pudesse ajudar sua nação adotiva,
-    os Estados Unidos, a manter a Alemanha nazista sob controle. Ela estava a par das últimas novidades em tecnologia
-    de torpedos europeia graças ao convívio com os clientes de seu ex-marido. Ela estava pensando em uma maneira de
-    os navios Aliados impedirem que seus torpedos controlados por rádio fossem sabotados por navios alemães, que
-     frequentemente interferiam com sucesso nos sinais de rádio Aliados e tornavam os torpedos inúteis.
-</p>
-<img src="lamarr.jpg" width="200" alt="foto da Hedy Lamarr">
 
-<h1> Qual foi a invenção de Hedy Lamarr </h1>
-    <p>Lamarr inventou o sistema que serviu de base para os telefones celulares.
-     Durante a Segunda Guerra Mundial, criou um sofisticado aparelho de interferência
-    em rádio para despistar radares nazistas que patenteou em 1940, usando o
-     seu verdadeiro nome, Hedwig Eva Maria Kiesler.</p>
+    <div class="container">
+        <h1>O início</h1>
+        <p>Enquanto o mundo caminhava para a Segunda Guerra Mundial, a atriz que já era uma lenda do cinema, 
+            Hedy Lamarr, posava para fotos publicitárias e interpretava femmes fatales nas telas.</p>
+        
+        <p>Lamarr era um gênio da tecnologia e, enquanto conquistava o coração de Hollywood na década de 1940,
+            estava ao mesmo tempo ocupada idealizando uma invenção que esperava que pudesse ajudar sua nação adotiva,
+            os Estados Unidos, a manter a Alemanha nazista sob controle. Ela estava a par das últimas novidades em tecnologia
+            de torpedos europeia graças ao convívio com os clientes de seu ex-marido. Ela estava pensando em uma maneira de
+            os navios Aliados impedirem que seus torpedos controlados por rádio fossem sabotados por navios alemães, que
+            frequentemente interferiam com sucesso nos sinais de rádio Aliados e tornavam os torpedos inúteis.
+        </p>
+
+        <div class="img-container">
+            <img src="lamarr.jpg" alt="Foto da Hedy Lamarr">
+        </div>
+
+        <h1>Qual foi a invenção de Hedy Lamarr</h1>
+        <p>Lamarr inventou o sistema que serviu de base para os telefones celulares.
+            Durante a Segunda Guerra Mundial, criou um sofisticado aparelho de interferência
+            em rádio para despistar radares nazistas que patenteou em 1940, usando o
+            seu verdadeiro nome, Hedwig Eva Maria Kiesler.
+        </p>
+    </div>
+
 </body>
 </html>
