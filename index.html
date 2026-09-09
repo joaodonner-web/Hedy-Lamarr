@@ -84,11 +84,71 @@
             border: 4px solid #ffffff;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
             transition: transform 0.3s ease;
+            cursor: pointer; /* Cursor de clique adicionado */
         }
 
         /* Efeito ao passar o mouse por cima da imagem */
         img:hover {
             transform: scale(1.03);
+        }
+
+        /* ===================================================
+           ESTILOS DO MODAL / TELA CHEIA
+        =================================================== */
+        .modal {
+            display: none; /* Escondido por padrão */
+            position: fixed;
+            z-index: 1000;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.85); /* Fundo escuro transparente */
+            backdrop-filter: blur(4px); /* Efeito suave de desfoque no fundo */
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Imagem dentro do modal */
+        .modal-content {
+            max-width: 75%; /* Garante que não fique exageradamente grande */
+            max-height: 80vh; /* Ajusta para caber na altura da tela */
+            width: auto;
+            border-radius: 8px;
+            border: 3px solid #ffffff;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+            animation: zoomIn 0.3s ease;
+            object-fit: contain;
+        }
+
+        /* Botão de Fechar (X) */
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: #ffffff;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.2s ease, transform 0.2s ease;
+            user-select: none;
+        }
+
+        .close-btn:hover {
+            color: #3498db;
+            transform: scale(1.2);
+        }
+
+        /* Animação de suave ao abrir */
+        @keyframes zoomIn {
+            from {
+                transform: scale(0.7);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
         }
     </style>
 </head>
@@ -109,7 +169,7 @@
 
         <!-- Moldura/Borda para a imagem -->
         <div class="img-container">
-            <img src="lamarr.jpg" alt="Foto da Hedy Lamarr">
+            <img src="lamarr.jpg" alt="Foto da Hedy Lamarr" id="myImg">
         </div>
 
         <!-- Linha divisória de seção -->
@@ -131,9 +191,48 @@
             Além do afastamento de Hollywood e da rejeição inicial de sua invenção precursora do Wi-Fi pela Marinha,
             a atriz viveu reclusa até o reconhecimento tardio de seu legado científico no final da vida.
             Hedy Lamarr morreu em decorrência de insuficiência cardíaca e problemas cardiovasculares em 19 de janeiro de 2000,
-            , aos 85 anos, em sua residência em Casselberry (próximo a Orlando), na Flórida, Estados Unidos.
+            aos 85 anos, em sua residência em Casselberry (próximo a Orlando), na Flórida, Estados Unidos.
         </p>
     </div>
+
+    <!--Estrutura do Modal para Tela Cheia -->
+    <div id="imageModal" class="modal">
+        <span class="close-btn">&times;</span>
+        <img class="modal-content" id="imgModalTarget" alt="Foto da Hedy Lamarr em destaque">
+    </div>
+
+    <!-- Script de controle do Modal -->
+    <script>
+        const modal = document.getElementById('imageModal');
+        const img = document.getElementById('myImg');
+        const modalImg = document.getElementById('imgModalTarget');
+        const closeBtn = document.querySelector('.close-btn');
+
+        // Abrir o modal ao clicar na imagem
+        img.onclick = function() {
+            modal.style.display = "flex";
+            modalImg.src = this.src;
+        }
+
+        // Fechar o modal ao clicar no 'X'
+        closeBtn.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // Fechar o modal ao clicar em qualquer lugar fora da imagem (no fundo escuro)
+        modal.onclick = function(event) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        // Fechar o modal ao pressionar a tecla ESC no teclado
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape") {
+                modal.style.display = "none";
+            }
+        });
+    </script>
 
 </body>
 </html>
